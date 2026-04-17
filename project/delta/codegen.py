@@ -20,4 +20,12 @@ class CodeGenerationVisitor(PTNodeVisitor):
         return self.WAT_TEMPLATE.format(children[0])
 
     def visit_expression(self, node, children):
+        return children[0]
+
+    def visit_decimal(self, node, children):
         return f'    i32.const {node.value}\n'
+
+    def visit_boolean(self, node, children):
+        if node.value == 'true':
+            return '    i32.const 1\n'
+        return '    i32.const 0\n'
