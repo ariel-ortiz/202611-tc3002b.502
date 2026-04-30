@@ -3,12 +3,6 @@
   (func
     (export "_start")
     (result i32)
-    i32.const 5
-    i32.const 6
-    i32.mul
-    i32.const 7
-    i32.div_s
-    i32.const 3
-    i32.rem_s
+    i32.const 42
   )
 )
